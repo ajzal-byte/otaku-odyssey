@@ -9,7 +9,7 @@ import "./globals.css";
 const dmSans = DM_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Anime Vault",
+  title: "Otaku Odyssey",
   description: "Your favorite anime, all in one place.",
 };
 
@@ -21,11 +21,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={dmSans.className}>
-        <main className="max-w-7xl mx-auto bg-[#0F1117]">
-          <Hero />
-          {children}
-          <Footer />
+        <Hero />
+        <main className=" bg-[#0F1117]">
+          <section className="max-w-7xl mx-auto">
+            {children}
+          </section>
         </main>
+            <Footer />
       </body>
     </html>
   );
